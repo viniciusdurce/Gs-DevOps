@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "zKBqurf0lChBA24RwkdkZ3G8mx+w+HI9tiWNb3mBrro=",
+  "Source": "EnergyConsumptionAPI",
+  "BasePath": "_content/EnergyConsumptionAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

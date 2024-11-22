@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EnergyConsumptionAPI</name>
+    </assembly>
+    <members>
+        <member name="T:EnergyConsumptionAPI.Controllers.EnergyConsumptionAnalysisController">
+            <summary>
+            Controlador para análise do consumo de energia.
+            Este controlador fornece endpoints para analisar registros de consumo de energia.
+            </summary>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionAnalysisController.#ctor(EnergyConsumptionAPI.Services.ConsumptionAnalysisService)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:EnergyConsumptionAPI.Controllers.EnergyConsumptionAnalysisController"/>.
+            </summary>
+            <param name="consumptionAnalysisService">O serviço responsável pela análise de consumo de energia.</param>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionAnalysisController.GetEnergyConsumptionAnalysis(System.String)">
+            <summary>
+            Obtém uma análise do consumo de energia específico pelo seu ID.
+            </summary>
+            <param name="id">O ID do registro de consumo de energia a ser analisado.</param>
+            <returns>A análise do consumo correspondente ao ID fornecido, ou um status 404 se não for encontrado.</returns>
+        </member>
+        <member name="T:EnergyConsumptionAPI.Controllers.EnergyConsumptionController">
+            <summary>
+            Controlador para gerenciar o consumo de energia no sistema.
+            Este controlador fornece endpoints para criar, ler, atualizar e deletar registros de consumo de energia.
+            </summary>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionController.#ctor(EnergyConsumptionAPI.Services.EnergyConsumptionService)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:EnergyConsumptionAPI.Controllers.EnergyConsumptionController"/>.
+            </summary>
+            <param name="energyConsumptionService">O serviço responsável pelas operações de consumo de energia.</param>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionController.GetEnergyConsumptions">
+            <summary>
+            Obtém uma lista de todos os registros de consumo de energia.
+            </summary>
+            <returns>Uma lista de registros de consumo de energia.</returns>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionController.GetEnergyConsumptionById(System.String)">
+            <summary>
+            Obtém um registro específico de consumo de energia pelo seu ID.
+            </summary>
+            <param name="id">O ID do registro de consumo de energia a ser obtido.</param>
+            <returns>O registro correspondente ao ID fornecido, ou um status 404 se não for encontrado.</returns>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionController.PostEnergyConsumption(EnergyConsumptionAPI.DTOs.EnergyConsumptionDTO)">
+            <summary>
+            Cria um novo registro de consumo de energia.
+            </summary>
+            <param name="energyConsumptionDto">Os dados do novo registro de consumo de energia a ser criado.</param>
+            <returns>Um status 201 se o registro for criado com sucesso, ou um status 400 em caso de erro.</returns>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionController.PutEnergyConsumption(System.String,EnergyConsumptionAPI.DTOs.EnergyConsumptionDTO)">
+            <summary>
+            Atualiza um registro existente de consumo de energia.
+            </summary>
+            <param name="id">O ID do registro a ser atualizado.</param>
+            <param name="energyConsumptionDto">O objeto contendo os dados atualizados do registro.</param>
+            <returns>Um status 200 se a atualização for bem-sucedida, um status 404 se o registro não for encontrado, ou um status 400 em caso de erro.</returns>
+        </member>
+        <member name="M:EnergyConsumptionAPI.Controllers.EnergyConsumptionController.DeleteEnergyConsumption(System.String)">
+            <summary>
+            Deleta um registro específico de consumo de energia pelo seu ID.
+            </summary>
+            <param name="id">O ID do registro a ser deletado.</param>
+            <returns>Um status 200 se o registro for deletado com sucesso, ou um status 404 se o registro não for encontrado.</returns>
+        </member>
+        <member name="T:EnergyConsumptionAPI.DTOs.EnergyConsumptionDTO">
+            <summary>
+            Data Transfer Object para a criação e atualização do consumo de energia.
+            </summary>
+        </member>
+        <member name="T:EnergyConsumptionAPI.Models.Base.BaseEntity">
+            <summary>
+            Classe base contendo propriedades comuns para consumo de energia.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.Base.BaseEntity.CPF">
+            <summary>
+            CPF associado ao relatório.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.Base.BaseEntity.Address">
+            <summary>
+            Endereço da residência.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.Base.BaseEntity.ResidenceType">
+            <summary>
+            Tipo de residência (ex: apartamento, casa).
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.Base.BaseEntity.MonthlyConsumption">
+            <summary>
+            Consumo mensal de energia em kWh.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.Base.BaseEntity.ResidentsCount">
+            <summary>
+            Quantidade de moradores na residência.
+            </summary>
+        </member>
+        <member name="T:EnergyConsumptionAPI.Models.EnergyConsumption">
+            <summary>
+            Cadastro do consumo de energia de uma residência.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.EnergyConsumption.Id">
+            <summary>
+            Identificador único do consumo de energia.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.EnergyConsumption.Timestamp">
+            <summary>
+            Data e hora do registro do consumo de energia.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.EnergyConsumptionAnalysis.IsHighConsumption">
+            <summary>
+            Flag indicando se o consumo está acima do limite definido.
+            </summary>
+        </member>
+        <member name="P:EnergyConsumptionAPI.Models.EnergyConsumptionAnalysis.SuggestedAction">
+            <summary>
+            Mensagem sugerindo uma ação para otimizar o consumo de energia.
+            </summary>
+        </member>
+    </members>
+</doc>
