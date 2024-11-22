@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyConsumptionAPI", "EnergyConsumptionAPI.csproj", "{8A07D7B4-4F66-4939-8D4D-396979164685}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A07D7B4-4F66-4939-8D4D-396979164685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A07D7B4-4F66-4939-8D4D-396979164685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A07D7B4-4F66-4939-8D4D-396979164685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A07D7B4-4F66-4939-8D4D-396979164685}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70840282-EC56-4C41-BA35-5CCF9C24AF6C}
+	EndGlobalSection
+EndGlobal
